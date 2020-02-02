@@ -1,24 +1,25 @@
-Request Headers
-User-Agent: PostmanRuntime/7.22.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 2e51f719-089a-4b9e-b4d0-780fc616862b
-Host: www.googleapis.com
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
+#Request Headers
+User-Agent: PostmanRuntime/7.22.0 #What application is sending the header
+Accept: */* #Which content the client can understand (*/* is all)
+Cache-Control: no-cache #Instructions for caching requests and responses
+Postman-Token: 2e51f719-089a-4b9e-b4d0-780fc616862b #For bypassing a bug in chrome with request sent by Posman
+Host: www.googleapis.com #Domain name of the server
+Accept-Encoding: gzip, deflate, br #What content body encoding the client can accept
+Connection: keep-alive #Whether the network connection stays open (keep-alive means it will not close and is persistent)
 
-Response Headers: Thu, 30 Jan 2020 00:30:15 GMT
-Expires: Thu, 30 Jan 2020 00:30:15 GMT
-Date: Thu, 30 Jan 2020 00:30:15 GMT
-Cache-Control: private, max-age=0, must-revalidate, no-transform
-ETag: "iPPser6Mov75mJUb_EktR4oB1SI/ceTP_vB8w6X_qmkK1PqjwJk6sn0"
-Vary: Origin
-Vary: X-Origin
-Content-Type: application/json; charset=UTF-8
-Content-Encoding: gzip
-X-Content-Type-Options: nosniff
-X-Frame-Options: SAMEORIGIN
-X-XSS-Protection: 1; mode=block
-Server: GSE
+#Response Headers
+Expires: Thu, 30 Jan 2020 00:30:15 GMT #Date and time after which response is considered stale
+Date: Thu, 30 Jan 2020 00:30:15 GMT #Date and time message was sent
+Cache-Control: private, max-age=0, must-revalidate, no-transform #Rules for caching request and respnse
+ETag: "iPPser6Mov75mJUb_EktR4oB1SI/ceTP_vB8w6X_qmkK1PqjwJk6sn0" #Identifies a specific resource version
+Vary: Origin #How to match future request headers
+Vary: X-Origin #How to match future request headers
+Content-Type: application/json; charset=UTF-8 #Indicates the resource's media type
+Content-Encoding: gzip The encoding of the content body
+X-Content-Type-Options: nosniff #To opt out of MMF sniffing
+X-Frame-Options: SAMEORIGIN #To avoid clickjacking attaks
+X-XSS-Protection: 1; mode=block #Stop pages from loading when they detect XSS attacks
+Server: GSE #How the server handles requests
 Alt-Svc: quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
-Transfer-Encoding: chunked
+#Defining alternate services in http headers
+Transfer-Encoding: chunked #Encoding used to transfer to user
